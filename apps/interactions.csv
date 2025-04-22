@@ -1,0 +1,101 @@
+id,entreprise_id,entreprise_nom,date,type,sujet,description,resultat,suivi_requis,date_suivi
+1,19,Entreprise 19,2025-01-18,Téléphone,Stage,Description de l'interaction 1,Neutre,True,
+2,2,Entreprise 2,2024-11-15,Téléphone,Suivi,Description de l'interaction 2,À suivre,False,
+3,10,Entreprise 10,2024-09-30,Autre,Prospection,Description de l'interaction 3,Négatif,True,
+4,4,Entreprise 4,2025-01-10,Téléphone,Alternance,Description de l'interaction 4,Négatif,True,
+5,2,Entreprise 2,2024-09-19,Email,Suivi,Description de l'interaction 5,Positif,False,2025-05-18
+6,30,Entreprise 30,2025-03-06,Email,Prospection,Description de l'interaction 6,Négatif,False,2025-05-16
+7,26,Entreprise 26,2024-12-11,Téléphone,Feedback,Description de l'interaction 7,Positif,True,2025-04-30
+8,12,Entreprise 12,2024-08-08,Autre,Événement,Description de l'interaction 8,Neutre,True,2025-05-03
+9,18,Entreprise 18,2024-10-22,Réunion,Offre d'emploi,Description de l'interaction 9,Positif,False,
+10,26,Entreprise 26,2025-04-02,Email,Feedback,Description de l'interaction 10,Négatif,True,
+11,11,Entreprise 11,2024-10-22,Événement,Offre d'emploi,Description de l'interaction 11,Neutre,False,
+12,13,Entreprise 13,2024-07-29,Réunion,Prospection,Description de l'interaction 12,Négatif,True,
+13,30,Entreprise 30,2024-09-11,Événement,Alternance,Description de l'interaction 13,À suivre,False,
+14,25,Entreprise 25,2025-04-21,Email,Alternance,Description de l'interaction 14,À suivre,False,
+15,16,Entreprise 16,2024-06-18,Réunion,Alternance,Description de l'interaction 15,Positif,False,2025-05-14
+16,8,Entreprise 8,2025-03-14,Téléphone,Offre d'emploi,Description de l'interaction 16,Négatif,False,
+17,18,Entreprise 18,2024-04-25,Réunion,Événement,Description de l'interaction 17,Négatif,False,
+18,14,Entreprise 14,2024-12-20,Téléphone,Alternance,Description de l'interaction 18,Neutre,True,
+19,20,Entreprise 20,2024-06-20,Autre,Alternance,Description de l'interaction 19,Positif,False,2025-04-24
+20,5,Entreprise 5,2024-10-31,Email,Événement,Description de l'interaction 20,Positif,False,2025-05-19
+21,21,Entreprise 21,2024-08-27,Réunion,Offre d'emploi,Description de l'interaction 21,À suivre,False,2025-05-13
+22,18,Entreprise 18,2024-07-27,Autre,Prospection,Description de l'interaction 22,Négatif,True,
+23,23,Entreprise 23,2024-05-04,Autre,Offre d'emploi,Description de l'interaction 23,À suivre,True,
+24,11,Entreprise 11,2025-01-13,Autre,Suivi,Description de l'interaction 24,Négatif,True,
+25,19,Entreprise 19,2025-03-17,Téléphone,Alternance,Description de l'interaction 25,Neutre,False,2025-05-21
+26,10,Entreprise 10,2024-06-05,Autre,Offre d'emploi,Description de l'interaction 26,Négatif,True,
+27,9,Entreprise 9,2024-09-13,Événement,Feedback,Description de l'interaction 27,À suivre,False,2025-05-17
+28,24,Entreprise 24,2025-03-02,Réunion,Feedback,Description de l'interaction 28,Négatif,True,
+29,4,Entreprise 4,2024-06-07,Événement,Événement,Description de l'interaction 29,Neutre,False,2025-05-11
+30,7,Entreprise 7,2024-11-11,Téléphone,Stage,Description de l'interaction 30,Neutre,False,
+31,9,Entreprise 9,2024-10-06,Événement,Alternance,Description de l'interaction 31,À suivre,False,
+32,22,Entreprise 22,2024-10-30,Email,Stage,Description de l'interaction 32,Négatif,True,
+33,2,Entreprise 2,2024-07-20,Email,Événement,Description de l'interaction 33,À suivre,True,2025-05-06
+34,2,Entreprise 2,2024-09-30,Email,Événement,Description de l'interaction 34,À suivre,False,2025-05-04
+35,18,Entreprise 18,2024-08-02,Autre,Stage,Description de l'interaction 35,À suivre,False,2025-05-10
+36,14,Entreprise 14,2024-07-01,Téléphone,Feedback,Description de l'interaction 36,À suivre,False,
+37,30,Entreprise 30,2024-10-27,Téléphone,Stage,Description de l'interaction 37,À suivre,True,2025-05-18
+38,14,Entreprise 14,2024-06-01,Réunion,Feedback,Description de l'interaction 38,Positif,False,
+39,2,Entreprise 2,2024-09-30,Email,Feedback,Description de l'interaction 39,Positif,False,
+40,14,Entreprise 14,2024-07-15,Email,Événement,Description de l'interaction 40,Négatif,True,
+41,17,Entreprise 17,2025-01-28,Autre,Événement,Description de l'interaction 41,Neutre,False,2025-05-20
+42,18,Entreprise 18,2024-09-04,Email,Prospection,Description de l'interaction 42,À suivre,True,2025-05-08
+43,20,Entreprise 20,2025-04-10,Autre,Suivi,Description de l'interaction 43,Neutre,False,2025-05-08
+44,14,Entreprise 14,2025-03-15,Email,Prospection,Description de l'interaction 44,Négatif,True,2025-04-28
+45,24,Entreprise 24,2024-07-03,Réunion,Stage,Description de l'interaction 45,Négatif,True,2025-05-17
+46,21,Entreprise 21,2025-04-18,Événement,Offre d'emploi,Description de l'interaction 46,Neutre,True,
+47,12,Entreprise 12,2025-02-14,Événement,Offre d'emploi,Description de l'interaction 47,À suivre,True,2025-05-21
+48,29,Entreprise 29,2024-10-26,Téléphone,Offre d'emploi,Description de l'interaction 48,À suivre,True,
+49,29,Entreprise 29,2025-02-14,Réunion,Alternance,Description de l'interaction 49,Positif,False,2025-05-18
+50,8,Entreprise 8,2025-04-15,Événement,Événement,Description de l'interaction 50,Neutre,True,
+51,17,Entreprise 17,2024-05-31,Email,Événement,Description de l'interaction 51,À suivre,True,2025-04-29
+52,3,Entreprise 3,2025-04-12,Événement,Feedback,Description de l'interaction 52,Positif,True,2025-05-03
+53,28,Entreprise 28,2024-09-28,Téléphone,Suivi,Description de l'interaction 53,Positif,True,2025-05-01
+54,16,Entreprise 16,2024-08-19,Événement,Feedback,Description de l'interaction 54,Positif,True,2025-04-29
+55,29,Entreprise 29,2025-03-08,Réunion,Alternance,Description de l'interaction 55,À suivre,True,2025-05-01
+56,12,Entreprise 12,2025-02-01,Autre,Stage,Description de l'interaction 56,Neutre,True,2025-04-24
+57,9,Entreprise 9,2024-07-03,Autre,Offre d'emploi,Description de l'interaction 57,Neutre,True,
+58,5,Entreprise 5,2024-05-24,Autre,Prospection,Description de l'interaction 58,À suivre,True,2025-05-08
+59,4,Entreprise 4,2024-09-27,Autre,Stage,Description de l'interaction 59,Neutre,False,2025-05-15
+60,13,Entreprise 13,2024-07-20,Autre,Offre d'emploi,Description de l'interaction 60,Neutre,False,2025-05-17
+61,10,Entreprise 10,2025-01-09,Téléphone,Offre d'emploi,Description de l'interaction 61,À suivre,False,2025-05-21
+62,26,Entreprise 26,2024-12-05,Réunion,Alternance,Description de l'interaction 62,À suivre,False,2025-05-13
+63,24,Entreprise 24,2024-10-27,Événement,Événement,Description de l'interaction 63,Neutre,False,2025-04-30
+64,26,Entreprise 26,2024-09-20,Téléphone,Événement,Description de l'interaction 64,À suivre,True,2025-05-16
+65,4,Entreprise 4,2025-01-21,Réunion,Suivi,Description de l'interaction 65,À suivre,True,2025-05-03
+66,10,Entreprise 10,2025-01-04,Autre,Stage,Description de l'interaction 66,Neutre,True,2025-04-23
+67,26,Entreprise 26,2025-01-04,Autre,Événement,Description de l'interaction 67,À suivre,False,2025-05-18
+68,1,Entreprise 1,2024-11-20,Email,Offre d'emploi,Description de l'interaction 68,Neutre,True,2025-05-07
+69,21,Entreprise 21,2024-06-26,Téléphone,Offre d'emploi,Description de l'interaction 69,À suivre,True,
+70,6,Entreprise 6,2024-08-31,Email,Feedback,Description de l'interaction 70,Négatif,True,2025-04-23
+71,16,Entreprise 16,2024-09-24,Événement,Stage,Description de l'interaction 71,Négatif,False,
+72,4,Entreprise 4,2025-04-16,Événement,Alternance,Description de l'interaction 72,Neutre,False,2025-05-17
+73,13,Entreprise 13,2024-11-10,Autre,Événement,Description de l'interaction 73,Neutre,False,2025-05-03
+74,14,Entreprise 14,2025-01-17,Réunion,Stage,Description de l'interaction 74,Positif,True,2025-04-29
+75,26,Entreprise 26,2024-12-11,Réunion,Alternance,Description de l'interaction 75,Positif,False,
+76,19,Entreprise 19,2024-07-31,Email,Prospection,Description de l'interaction 76,Neutre,False,
+77,29,Entreprise 29,2024-10-10,Événement,Feedback,Description de l'interaction 77,À suivre,False,2025-05-10
+78,22,Entreprise 22,2024-05-31,Téléphone,Événement,Description de l'interaction 78,Négatif,True,2025-05-21
+79,14,Entreprise 14,2024-09-07,Événement,Offre d'emploi,Description de l'interaction 79,Négatif,True,2025-05-13
+80,17,Entreprise 17,2024-06-15,Réunion,Événement,Description de l'interaction 80,Positif,True,2025-05-17
+81,8,Entreprise 8,2024-04-26,Email,Offre d'emploi,Description de l'interaction 81,Neutre,True,
+82,14,Entreprise 14,2024-06-10,Événement,Événement,Description de l'interaction 82,Positif,False,
+83,19,Entreprise 19,2024-07-02,Événement,Stage,Description de l'interaction 83,Positif,False,2025-05-11
+84,3,Entreprise 3,2024-07-08,Autre,Alternance,Description de l'interaction 84,À suivre,False,2025-05-09
+85,17,Entreprise 17,2025-02-24,Email,Prospection,Description de l'interaction 85,Neutre,False,
+86,13,Entreprise 13,2024-12-11,Réunion,Suivi,Description de l'interaction 86,Positif,True,
+87,13,Entreprise 13,2024-12-06,Téléphone,Offre d'emploi,Description de l'interaction 87,Négatif,True,2025-05-05
+88,12,Entreprise 12,2024-11-26,Événement,Feedback,Description de l'interaction 88,Neutre,False,2025-04-30
+89,28,Entreprise 28,2024-08-14,Téléphone,Feedback,Description de l'interaction 89,À suivre,True,2025-05-11
+90,14,Entreprise 14,2025-04-09,Autre,Offre d'emploi,Description de l'interaction 90,Positif,False,
+91,28,Entreprise 28,2025-02-12,Autre,Stage,Description de l'interaction 91,À suivre,False,
+92,16,Entreprise 16,2024-11-13,Téléphone,Alternance,Description de l'interaction 92,Positif,True,
+93,4,Entreprise 4,2024-08-22,Autre,Suivi,Description de l'interaction 93,À suivre,False,
+94,2,Entreprise 2,2024-07-16,Email,Suivi,Description de l'interaction 94,Neutre,True,
+95,11,Entreprise 11,2024-08-04,Autre,Stage,Description de l'interaction 95,Positif,True,2025-05-20
+96,11,Entreprise 11,2024-05-09,Réunion,Alternance,Description de l'interaction 96,À suivre,True,
+97,24,Entreprise 24,2025-03-02,Autre,Feedback,Description de l'interaction 97,Neutre,True,
+98,1,Entreprise 1,2024-10-25,Email,Événement,Description de l'interaction 98,Positif,False,2025-05-20
+99,27,Entreprise 27,2024-07-27,Événement,Alternance,Description de l'interaction 99,Neutre,True,2025-05-13
+100,1,Entreprise 1,2024-08-07,Téléphone,Suivi,Description de l'interaction 100,Positif,True,2025-05-21

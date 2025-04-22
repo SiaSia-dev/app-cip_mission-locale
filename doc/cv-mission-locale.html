@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Alexia Fontaine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* A4 Print Optimization Styles */
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.5;
+            font-size: 10pt;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Container pour centrer le contenu et limiter la largeur à A4 */
+        .container {
+            width: 100%;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 0 10mm;
+            background-color: white;
+            min-height: 297mm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Bouton d'impression */
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #90c5b5;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .print-button:hover {
+            background-color: #c9dfd6;
+        }
+
+        @media print {
+            .print-button {
+                display: none !important;
+            }
+        }
+
+        /* En-tête du CV */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8mm;
+            border-bottom: 2px solid #90c5b5;
+            padding-bottom: 4mm;
+            padding-top: 8mm;
+        }
+
+        .cv-header h1 {
+            font-size: 16pt;
+            margin-bottom: 2mm;
+            font-family: 'Playfair Display', serif;
+            color: #2a6d81;
+            font-weight: 600;
+        }
+
+        .cv-header .header-subtitle {
+            font-size: 10pt;
+            color: #666;
+        }
+
+        .cv-contact {
+            text-align: right;
+            font-size: 9pt;
+        }
+
+        .cv-contact p {
+            margin-bottom: 2mm;
+        }
+
+        .cv-contact i {
+            color: #90c5b5;
+            width: 15px;
+            text-align: center;
+            margin-right: 3mm;
+        }
+
+        /* Titres des sections */
+        .section-title-container {
+            margin-bottom: 5mm;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            color: #2a6d81;
+            border-bottom: 1px solid #90c5b5;
+            padding-bottom: 2mm;
+            margin-bottom: 3mm;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-content {
+            margin-bottom: 8mm;
+        }
+
+        .site p {
+            text-align: right !important;
+        }
+
+        /* Expériences */
+        .experience-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 3mm;
+            margin-bottom: 3mm;
+        }
+
+        .experience-item h3 {
+            font-size: 10pt;
+            color: #2a6d81;
+            margin-bottom: 1mm;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .experience-item p {
+            font-size: 9pt;
+            margin-bottom: 1mm;
+        }
+
+        /* Listes de compétences */
+        .skill-list {
+            list-style-position: inside;
+            padding-left: 0;
+            margin-left: 0;
+            margin-bottom: 3mm;
+        }
+
+        .skill-list li {
+            font-size: 9pt;
+            margin-bottom: 1mm;
+            position: relative;
+            padding-left: 15px;
+            
+        }
+
+
+        /* Grille pour les compétences */
+        .skill-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5mm;
+        }
+
+        .skill-grid > div {
+            width: 48%;
+        }
+
+        .skill-grid h3 {
+            font-size: 10pt;
+            color: #2a6d81;
+            margin-bottom: 2mm;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Formation */
+        .formation-item {
+            margin-bottom: 4mm;
+        }
+
+        .formation-item h3 {
+            font-size: 10pt;
+            color: #2a6d81;
+            margin-bottom: 1mm;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .formation-item p {
+            font-size: 9pt;
+            margin-bottom: 1mm;
+            color: #666;
+        }
+
+        /* Liens sociaux */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 6mm;
+            padding-top: 4mm;
+            border-top: 1px solid #90c5b5;
+        }
+
+        .social-links a {
+            color: #2a6d81;
+            text-decoration: none;
+            font-size: 9pt;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a i {
+            margin-right: 5px;
+            color: #90c5b5;
+        }
+
+        /* Optimisations pour l'impression */
+        @media print {
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+
+            .container {
+                width: 100%;
+                box-shadow: none;
+                padding: 10mm;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bouton d'impression -->
+    <button onclick="window.print()" class="print-button">Imprimer</button>
+
+    <div class="container">
+        <!-- En-tête -->
+        <div class="cv-header">
+            <div>
+                <h1>ALEXIA FONTAINE</h1>
+                <p class="header-subtitle">CHARGÉE DE PROJET | INSERTION PROFESSIONNELLE | MÉDIATION</p>
+            </div>
+            <div class="cv-contact">
+                <p><i class="fas fa-phone"></i> 07.69.03.18.97</p>
+                <p><i class="fas fa-envelope"></i> fontaine.alexia8@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 120 rue de Voves - 28630 Le Coudray</p>
+                <p><i class="fas fa-car"></i> Permis B - véhicule</p>
+            </div>
+        </div>
+
+        <!-- Profil -->
+        <section class="section-content">
+            <div class="section-title-container">
+                <h2 class="section-title">Profil</h2>
+            </div>
+            <p>Spécialiste en médiation numérique et ingénierie pédagogique, je souhaite mettre mes compétences au service de l'insertion professionnelle des jeunes et du développement des relations avec les entreprises.</p>
+            <br>
+            <p>Mon parcours pluridisciplinaire me permet d'élaborer des projets innovants et adaptés aux besoins des différents publics.
+            Et ma sensibilité aux enjeux du numérique appuyée par ma formation en analyse de données (2023) me permettent de contribuer efficacement à la structuration et à l'amélioration continue des offres de service, tout en apportant une vision analytique des problématiques d'insertion.</p>
+            <br>
+            <p>Dotée aussi d'une expérience significative en gestion administrative et logistique, je m'adapte facilement à différents environnements de travail et sais organiser mon activité selon les priorités et les objectifs.</p>
+            <br>
+            <p>A l'aise dans la création de contenus pédagogiques, je me permets de vous joindre le lien vers 
+            <p style="text-align: center;">mon <a href="">SITE DE PRESENTATION</a> pour ce poste.</p>
+            
+        </section>
+
+        <!-- Compétences -->
+        <section class="section-content">
+            <div class="section-title-container">
+                <h2 class="section-title">Compétences</h2>
+            </div>
+            <div class="skill-grid">
+                <div>
+                    <h3>Compétences liées à l'insertion professionnelle</h3>
+                    <ul class="skill-list">
+                        <li>Développement et animation de réseaux de partenaires</li>
+                        <li>Conception et animation d'ateliers collectifs</li>
+                        <li>Accompagnement individualisé et techniques d'entretien</li>
+                        <li>Organisation d'événements et de manifestations</li>
+                        <li>Prospection d'entreprises et promotion de services</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Compétences techniques et transversales</h3>
+                    <ul class="skill-list">
+                        <li>Gestion de projet et amélioration continue</li>
+                        <li>Analyse de données et reporting (SQL, R)</li>
+                        <li>Administration de services numériques (LMS-CMS)</li>
+                        <li>Communication écrite et orale professionnelle</li>
+                        <li>Veille documentaire et réglementaire</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expérience -->
+        <section class="section-content">
+            <div class="section-title-container">
+                <h2 class="section-title">Expérience Professionnelle</h2>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Assistante de ressources documentaires</h3>
+                <p><strong>FNSEA</strong> | 2024</p>
+                <p><strong>THALES</strong> | Sept 2023 - Nov 2023</p>
+                <ul class="skill-list">
+                    <li>Médiation entre ressources documentaires, services et utilisateurs</li>
+                    <li>Automatisation de chaîne logistique: extraction et transformation des données</li>
+                    <li>Mise en œuvre des systèmes de classement et organisation de l'information</li>
+                    <li>Création et mise à jour des bases de données (SQL)</li>
+                    <li>Veille et curation de contenus spécialisés</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Ingénieure pédagogique / Ingénieure hospitalier</h3>
+                <p><strong>CENTRE HOSPITALIER DREUX</strong> | 2021-2022</p>
+                <ul class="skill-list">
+                    <li>Analyse des besoins de formation et conception de parcours personnalisés</li>
+                    <li>Animation d'ateliers collectifs et accompagnement individualisé</li>
+                    <li>Conception et diffusion d'enquêtes, analyse des résultats</li>
+                    <li>Gestion des services numériques d'apprentissage (LMS)</li>
+                    <li>Développement d'applications web pour l'amélioration de services</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Conceptrice pédagogique – Rédactrice web</h3>
+                <p><strong>CENTRE HOSPITALIER DREUX</strong> | 2021-2022</p>
+                <p><strong>CULTUR'MOUV</strong> | 2017</p>
+                <ul class="skill-list">
+                    <li>Élaboration et mise en œuvre de projets pédagogiques</li>
+                    <li>Conception et organisation éditoriale de contenus adaptés</li>
+                    <li>Analyses fonctionnelles et rédaction de documentation technique</li>
+                    <li>Administration de systèmes de gestion de contenus (CMS)</li>
+                    <li>Développement de méthodologies de communication adaptées aux publics</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Technicienne d'exploitation, d'assistance et de traitement de l'information</h3>
+                <p><strong>CENTRE HOSPITALIER DREUX</strong> | 2021-2022</p>
+                <p><strong>ARKEMINE SARL</strong> | 2012</p>
+                <p><strong>SERVICE RÉGIONAL DE LORRAINE</strong> | 2009-2010</p>
+                <ul class="skill-list">
+                    <li>Accompagnement des utilisateurs et résolution d'incidents</li>
+                    <li>Participation aux actions de formation et de sensibilisation</li>
+                    <li>Rédaction de comptes-rendus et de notices d'utilisation</li>
+                    <li>Traitement des données et exploitation pour reporting</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Formation -->
+        <section class="section-content">
+            <div class="section-title-container">
+                <h2 class="section-title">Formation</h2>
+            </div>
+            
+            <div class="formation-item">
+                <h3>Analyste de données</h3>
+                <p>Session de formation | Février-Novembre 2023</p>
+                <p>M2i Formation - Orléans</p>
+            </div>
+
+            <div class="formation-item">
+                <h3>Master 2 Humanités numériques</h3>
+                <p>SCIENCES DU LANGAGE spécialité GESTION DES CONNAISSANCES, FORMATIONS (2018)</p>
+                <p>Parcours médiation numérique et ingénierie pédagogique</p>
+                <p>Mention TRÈS BIEN</p>
+                <p>UNIVERSITÉ PAUL VALÉRY - Montpellier</p>
+            </div>
+
+            <div class="formation-item">
+                <h3>PostgreSQL / PostGIS</h3>
+                <p>Session de formation (niveau 1) | Avril 2020</p>
+                <p>MAKINA CORPUS - Paris</p>
+            </div>
+
+            <div class="formation-item">
+                <h3>Master 2 Archéomatique</h3>
+                <p>SCIENCES HISTORIQUES spécialité GÉOMATIQUE appliquée à l'ARCHÉOLOGIE (2008)</p>
+                <p>Mention BIEN</p>
+                <p>UNIVERSITÉ FRANÇOIS RABELAIS - Tours</p>
+            </div>
+
+            <div class="formation-item">
+                <h3>Savoir-être professionnels</h3>
+                <ul class="skill-list">
+                    <li>Sens du service et capacité d'écoute</li>
+                    <li>Organisation du travail selon les priorités et les objectifs</li>
+                    <li>Travail en équipe et en réseau</li>
+                    <li>Adaptabilité et autonomie</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Liens sociaux -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/alexiafontaine" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://portfolio-af-v2.netlify.app/" target="_blank">
+                <i class="fas fa-briefcase"></i> Portfolio
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexia Fontaine - Chargé(e) de projet Mission Locale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2a6d81;
+            --secondary: #1d4954;
+            --light: #f6f9fc;
+            --dark: #334756;
+            --accent: #90c5b5;
+            --accent-light: #c9dfd6;
+            --accent-dark: #336b78;
+            --text: #333;
+            --text-light: #666;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark);
+            letter-spacing: 0.3px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: var(--text);
+        }
+        
+        a {
+            color: var(--accent-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--accent);
+        }
+        
+        /* Container & Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        .section {
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-alternate {
+            background-color: white;
+        }
+        
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        
+        .section-title:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: var(--accent-dark);
+            font-weight: 400;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 100px 0 70px;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .header-title {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .header-cta {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-cta:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            color: white;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+        }
+    
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+    
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        /* About */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+    
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            color: white;
+        }
+        
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-category h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h3 i {
+            margin-right: 15px;
+            color: var(--accent);
+        }
+        
+        .skill-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .skill-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list li:before {
+            content: '✓';
+            color: var(--accent-dark);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 30px;
+        }
+                
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .tag {
+            background-color: var(--accent-light);
+            color: var(--dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            transition: var(--transition);
+        }
+        
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: var(--accent-light);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            display: flex;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content:before {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content:before {
+            left: -10px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent);
+            border: 4px solid var(--accent-light);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Fit For Role Section */
+        .fit-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .fit-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .fit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fit-item i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .fit-item h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        /* Project Large Cards */
+        .project-card-large {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 40px;
+        }
+        
+        .project-card-large:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card-content {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .project-card-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .project-card-text {
+            flex: 2;
+            padding: 30px;
+        }
+        
+        .project-card-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 30px;
+        }
+        
+        .project-card-title {
+            margin: 0;
+            color: white;
+        }
+        
+        .project-results {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--accent-light);
+        }
+        
+        .result-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .result-icon {
+            width: 30px;
+            height: 30px;
+            background-color: var(--accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .result-icon i {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+    
+        /* Méthodologie */
+        .methodology-container {
+            margin-top: 50px;
+        }
+    
+        .methodology-item {
+            display: flex;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+    
+        .methodology-number {
+            background-color: var(--accent);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-right: 25px;
+            flex-shrink: 0;
+        }
+    
+        .methodology-content {
+            flex: 1;
+        }
+    
+        .methodology-title {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+    
+        /* Cycle */
+        .competence-cycle {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: 10px;
+            margin-top: 5px;
+            justify-content: center;
+        }
+        
+        .cycle-item {
+            text-align: center;
+            margin: 0 20px;
+            max-width: 200px;
+        }
+        
+        .cycle-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .cycle-icon i {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+        
+        .cycle-item:hover .cycle-icon {
+            background-color: var(--accent);
+            transform: scale(1.1);
+        }
+        
+        .cycle-item h4 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .cycle-arrows {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+    
+        /* Skill bars */
+        .skill-bar {
+            height: 8px;
+            background-color: var(--accent-light);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1.5s ease;
+            background-color: var(--accent-dark);
+        }
+
+        
+        
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content:before,
+            .timeline-item:nth-child(even) .timeline-content:before {
+                left: -10px;
+                right: auto;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .project-card-content {
+                flex-direction: column;
+            }
+            
+            .project-card-image {
+                max-width: 100%;
+            }
+    
+            .methodology-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+    
+            .methodology-number {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <h1 class="header-title">Alexia Fontaine</h1>
+            <p class="header-subtitle">Insertion Professionnelle | Partenariats | Relation Entreprise</p>
+            <p class="header-subtitle">Candidate au poste de Chargée de projet à la Mission Locale</p>
+            <a href="#contact" class="header-cta">Me contacter</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container" style="display: flex; justify-content: center; padding: 15px 0;">
+            <ul>
+                <li><a href="#about">Présentation</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#methodology">Méthodologie</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#fit">Adéquation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>    
+
+    <!-- Présentation -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Présentation</p>
+                <h2 class="section-title">Qui suis-je?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/AF-Profil6.jpg" alt="Alexia Fontaine">
+                </div>
+                <div class="about-text">
+                    <h3>Qualifiée en Médiation et l'Accompagnement vers l'Emploi</h3>
+                    <p>Formée en ingénierie pédagogique et en médiation numérique, j'ai développé une approche centrée sur l'humain et adaptée aux défis de l'insertion professionnelle des jeunes. Mon parcours pluridisciplinaire me permet d'aborder les enjeux de l'emploi et de la formation sous différents angles.</p>
+                    
+                    <p>Ma récente formation en analyse de données (2023) témoigne de ma capacité d'adaptation et d'apprentissage, compétences essentielles pour comprendre les évolutions du marché du travail et proposer des solutions innovantes en matière d'insertion professionnelle.</p>
+                    
+                    <p>L'accompagnement des personnes dans leur parcours professionnel est au cœur de mes préoccupations. Je m'appuierai sur votre expertise en gestion de projet, développement de partenariats et médiation pour faciliter la rencontre entre les jeunes et le monde professionnel.</p>
+                    
+                    <p>Cette candidature au poste de Chargée de projet à la Mission Locale représente pour moi une opportunité de mettre ces compétences au service de l'insertion des jeunes et de contribuer activement au développement économique local.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section class="section section-alternate" id="skills">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Expertise</p>
+                <h2 class="section-title">Compétences Clés</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> Accompagnement & Insertion</h3>
+                    <ul class="skill-list">
+                        <li>Élaboration de projets d'orientation professionnelle</li>
+                        <li>Animation d'ateliers collectifs (TRE, préparation entretien)</li>
+                        <li>Techniques d'entretien individuel et collectif</li>
+                        <li>Accompagnement dans les démarches administratives</li>
+                        <li>Connaissance des dispositifs d'insertion et d'emploi</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-handshake"></i> Partenariats & Entreprises</h3>
+                    <ul class="skill-list">
+                        <li>Développement et animation de réseaux professionnels</li>
+                        <li>Prospection et promotion auprès des employeurs</li>
+                        <li>Organisation d'événements de mise en relation</li>
+                        <li>Négociation et élaboration de conventions</li>
+                        <li>Connaissance du marché de l'emploi local</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tasks"></i> Gestion de Projet</h3>
+                    <ul class="skill-list">
+                        <li>Conception et mise en œuvre de projets d'insertion</li>
+                        <li>Animation de réunions stratégiques</li>
+                        <li>Évaluation et amélioration continue</li>
+                        <li>Gestion administrative et logistique</li>
+                        <li>Reporting et analyse d'indicateurs</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Outils Numériques</h3>
+                    <ul class="skill-list">
+                        <li>Gestion de bases de données et suivi (SQL)</li>
+                        <li>Analyse de données et reporting (R)</li>
+                        <li>Administration de systèmes d'information</li>
+                        <li>Création de supports de formation adaptés</li>
+                        <li>Veille documentaire et technologique</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Méthodologie -->
+    <section class="section" id="methodology">
+        <div class="container">
+            <div class="section-title-container">
+                <p class="section-subtitle">Approche</p>
+                <h2 class="section-title">Ma Méthodologie d'Accompagnement</h2>
+            </div>
+            
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Une approche structurée pour accompagner efficacement les personnes dans leur parcours d'insertion professionnelle et développer des partenariats solides avec les entreprises.</p>
+            
+            <div class="methodology-container">
+                <div class="methodology-item">
+                    <div class="methodology-number">1</div>
+                    <div class="methodology-content">
+                        <h3 class="methodology-title">Analyse des besoins et diagnostic</h3>
+                        <p>Ma première étape consiste à identifier précisément les besoins, tant du côté des jeunes que des entreprises. Je mène un diagnostic approfondi qui me permet de comprendre les freins à l'emploi, les aspirations professionnelles des personnes accompagnées et les besoins en recrutement des employeurs locaux.</p>
+                        <p>Outils utilisés : entretiens structurés, questionnaires d'analyse, cartographie des acteurs, analyse des données locales de l'emploi.</p>
+                    </div>
+                </div>
+                
+                <div class="methodology-item">
+                    <div class="methodology-number">2</div>
+                    <div class="methodology-content">
+                        <h3 class="methodology-title">Élaboration de parcours personnalisés</h3>
+                        <p>Sur la base du diagnostic, je conçois des parcours d'accompagnement adaptés aux besoins spécifiques de chaque personne. Cette approche personnalisée permet d'identifier les étapes nécessaires pour lever les freins à l'emploi et construire un projet professionnel réaliste et ambitieux.</p>
+                        <p>Méthodes utilisées : co-construction du projet, définition d'objectifs SMART, identifications des compétences transférables, valorisation des acquis.</p>
+                    </div>
+                </div>
+                
+                <div class="methodology-item">
+                    <div class="methodology-number">3</div>
+                    <div class="methodology-content">
+                        <h3 class="methodology-title">Développement stratégique de partenariats</h3>
+                        <p>Je développe des partenariats en adoptant une approche gagnant-gagnant qui répond aux besoins des entreprises tout en favorisant l'insertion des jeunes. Cette démarche repose sur une compréhension fine des enjeux de recrutement et une relation de confiance avec les employeurs.</p>
+                        <p>Techniques : prospection ciblée, animation de réseau, organisation d'événements thématiques, création d'outils de suivi des partenariats, élaboration de conventions sur mesure.</p>
+                    </div>
+                </div>
+                
+                <div class="methodology-item">
+                    <div class="methodology-number">4</div>
+                    <div class="methodology-content">
+                    <h3 class="methodology-title">Mise en œuvre et suivi des actions</h3>
+                    <p>J'accompagne la mise en œuvre concrète des parcours d'insertion et des partenariats en assurant un suivi régulier et une coordination efficace entre tous les acteurs. Cette phase d'exécution s'appuie sur des outils de pilotage que j'ai développés pour garantir la qualité des actions menées.</p>
+                    <p>Outils utilisés : tableaux de bord de suivi, réunions de coordination, accompagnement individuel et collectif, organisation d'événements de mise en relation.</p>
+                </div>
+            </div>
+            
+            <div class="methodology-item">
+                <div class="methodology-number">5</div>
+                <div class="methodology-content">
+                    <h3 class="methodology-title">Évaluation et amélioration continue</h3>
+                    <p>Je mets en place des dispositifs d'évaluation pour mesurer l'impact des actions et identifier les axes d'amélioration. Cette démarche permet d'ajuster les parcours, de renforcer les partenariats efficaces et d'optimiser les ressources mobilisées.</p>
+                    <p>Méthodes : collecte et analyse d'indicateurs, enquêtes de satisfaction, entretiens de bilan, réunions de retour d'expérience, mise en place de plans d'action correctifs.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h3 style="text-align: center; margin: 60px 0 30px;">Le cycle d'insertion professionnelle</h3>
+        
+        <div class="competence-cycle">
+            <div class="cycle-item">
+                <div class="cycle-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h4>Diagnostic</h4>
+                <p>Identification des freins et potentiels</p>
+            </div>
+            
+            <div class="cycle-arrows">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </div>
+            
+            <div class="cycle-item">
+                <div class="cycle-icon">
+                    <i class="fas fa-map"></i>
+                </div>
+                <h4>Projet</h4>
+                <p>Élaboration du parcours personnalisé</p>
+            </div>
+            
+            <div class="cycle-arrows">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </div>
+            
+            <div class="cycle-item">
+                <div class="cycle-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h4>Préparation</h4>
+                <p>Acquisition des compétences nécessaires</p>
+            </div>
+            
+            <div class="cycle-arrows">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </div>
+            
+            <div class="cycle-item">
+                <div class="cycle-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h4>Mise en relation</h4>
+                <p>Connexion avec les employeurs</p>
+            </div>
+            
+            <div class="cycle-arrows">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </div>
+            
+            <div class="cycle-item">
+                <div class="cycle-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h4>Suivi</h4>
+                <p>Accompagnement dans l'emploi</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projets -->
+<section class="section section-alternate" id="projects">
+    <div class="container">
+        <div class="section-title-container">
+            <p class="section-subtitle">Réalisations</p>
+            <h2 class="section-title">Projets Significatifs</h2>
+        </div>
+        
+        <!-- Projet 1 -->
+        <div class="project-card-large">
+            <div class="project-card-header">
+                <h3 class="project-card-title">Plateforme de Mise en Relation Jeunes-Entreprises</h3>
+            </div>
+            <div class="project-card-content">
+                <img src="img/hand-819279_640.jpg" alt="Plateforme de Mise en Relation" class="project-card-image">
+                <div class="project-card-text">
+                    <div class="project-tags" style="margin-bottom: 20px;">
+                        <span class="tag">Insertion Professionnelle</span>
+                        <span class="tag">Développement Web</span>
+                        <span class="tag">Base de données</span>
+                        <span class="tag">Interface Utilisateur</span>
+                    </div>
+                    
+                    <p><strong>Contexte :</strong> Besoin d'améliorer l'efficacité de la mise en relation entre les jeunes en recherche d'emploi et les entreprises locales.</p>
+                    
+                    <p><strong>Mission :</strong> Conception et développement d'une application permettant de matcher les profils des jeunes avec les offres d'emploi des entreprises en fonction de critères pertinents.</p>
+                    
+                    <p><strong>Actions :</strong> Analyse des besoins des deux parties, création d'une base de données structurée, développement d'algorithmes de matching, conception d'interfaces utilisateur intuitives, mise en place d'un système de suivi des mises en relation.</p>
+                    
+                    <a href="https://suivi-pedago.streamlit.app/" class="btn" style="margin-right: 10px; margin-bottom: 10px;">Accéder à la démonstration</a>
+
+                    <div class="project-results">
+                        <h4>Résultats envisageables :</h4>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <p>Augmentation du taux de mise en relation</p>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <p>Réduction du temps de traitement des candidatures</p>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <p>Élargissement du réseau d'entreprises partenaires</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projet 2 -->
+        <div class="project-card-large">
+            <div class="project-card-header">
+                <h3 class="project-card-title">Ateliers Collectifs de Techniques de Recherche d'Emploi</h3>
+            </div>
+            <div class="project-card-content">
+                <img src="img/dream-job-4453054_640.jpg" alt="Ateliers TRE" class="project-card-image">
+                <div class="project-card-text">
+                    <div class="project-tags" style="margin-bottom: 20px;">
+                        <span class="tag">Animation de groupe</span>
+                        <span class="tag">Pédagogie</span>
+                        <span class="tag">Outils numériques</span>
+                        <span class="tag">Insertion</span>
+                    </div>
+                    
+                    <p><strong>Contexte :</strong> Besoin de renforcer les compétences des jeunes en matière de recherche d'emploi et de préparation aux entretiens d'embauche.</p>
+                    
+                    <p><strong>Mission :</strong> Conception et animation d'ateliers collectifs combinant techniques traditionnelles et outils numériques pour préparer efficacement les jeunes au marché du travail.</p>
+                    
+                    <p><strong>Actions :</strong> Élaboration d'un programme pédagogique complet, création de supports interactifs, mise en place d'exercices pratiques (simulations d'entretiens, rédaction de CV), développement d'outils numériques d'aide à la recherche d'emploi.</p>
+                    
+                    <a href="https://faq-desinfection.onrender.com" class="btn" style="margin-right: 10px; margin-bottom: 10px;">Exemple d'outil interactif</a>
+
+                    <div class="project-results">
+                        <h4>Résultats envisageables :</h4>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <p>Formation des jeunes aux techniques de recherche d'emploi</p>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <p>Obtention d'un entretien dans les 3 mois</p>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>Satisfaction des participants</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projet 3 -->
+        <div class="project-card-large">
+            <div class="project-card-header">
+                <h3 class="project-card-title">Dispositif de Prospection et Fidélisation des Entreprises</h3>
+            </div>
+            <div class="project-card-content">
+                <img src="img/crm.jpg" alt="Dispositif de Prospection" class="project-card-image">
+                <div class="project-card-text">
+                    <div class="project-tags" style="margin-bottom: 20px;">
+                        <span class="tag">Relation Entreprise</span>
+                        <span class="tag">CRM</span>
+                        <span class="tag">Analyse de données</span>
+                        <span class="tag">Partenariats</span>
+                    </div>
+                    
+                    <p><strong>Contexte :</strong> Nécessité de développer et structurer un réseau d'entreprises partenaires pour faciliter l'insertion professionnelle des jeunes.</p>
+                    
+                    <p><strong>Mission :</strong> Création d'un dispositif complet de prospection, suivi et fidélisation des entreprises partenaires.</p>
+                    
+                    <p><strong>Actions :</strong> Élaboration d'une stratégie de prospection ciblée, création d'outils de suivi des relations entreprises, organisation d'événements de networking, mise en place d'un système de feedback et d'amélioration continue.</p>
+                    
+                    <a href="https://suividoc.streamlit.app/" class="btn" style="margin-right: 10px; margin-bottom: 10px;">Voir l'outil de démonstration de suivi</a>
+
+                    <div class="project-results">
+                        <h4>Résultats envisageables :</h4>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <p>Constitution d'un réseau d'entreprises partenaires actives</p>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <p>Augmentation des offres d'emploi et de stage</p>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <p>Développement de partenariats durables et diversifiés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Expérience Professionnelle -->
+<section class="section" id="experience">
+    <div class="container">
+        <div class="section-title-container">
+            <p class="section-subtitle">Parcours</p>
+            <h2 class="section-title">Expérience Professionnelle</h2>
+        </div>
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <p class="timeline-date">2009-2024</p>
+                    <h3 class="timeline-title">Technicienne d'Exploitation et Assistante de ressources documentaires</h3>
+                    <p>FNSEA | THALES | CH Dreux | SRA Lorraine</p>
+                    <ul>
+                        <li>Traitement des données et assistance</li>
+                        <li>Suivi administratif de projets</li>
+                        <li>Accueil et médiation</li>
+                        <li>Reporting et indicateurs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <p class="timeline-date">Oct 2021 - Nov 2022</p>
+                    <h3 class="timeline-title">Ingénieure Pédagogique / Médiatrice Numérique</h3>
+                    <p>Centre Hospitalier de Dreux</p>
+                    <ul>
+                        <li>Conception et gestion des services numériques (LMS, CMS)</li>
+                        <li>Suivi administratif des formations</li>
+                        <li>Gestion des dossiers de formation</li>
+                        <li>Création de supports de suivi et reporting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <p class="timeline-date">2021-2022 & 2017</p>
+                    <h3 class="timeline-title">Conceptrice de Contenus – Rédactrice Web</h3>
+                    <p>Centre Hospitalier de Dreux & Cultur'Mouv</p>
+                    <ul>
+                        <li>Administration de systèmes de gestion des contenus</li>
+                        <li>Mise à jour des plateformes de suivi</li>
+                        <li>Gestion documentaire</li>
+                        <li>Création de tableaux de bord</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Adéquation avec le poste -->
+<section class="section section-alternate" id="fit">
+    <div class="container">
+        <div class="section-title-container">
+            <p class="section-subtitle">Positionnement</p>
+            <h2 class="section-title">Adéquation avec le Poste</h2>
+        </div>
+        
+        <h3 style="text-align: center; margin-bottom: 30px;">Comment mes compétences répondent aux missions du poste</h3>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">Le poste de Chargée de projet à la Mission Locale nécessite une combinaison de compétences en gestion de projet, développement de partenariats et accompagnement des jeunes. Voici comment mon profil répond précisément à ces exigences :</p>
+        
+        <div class="fit-content">
+            <div class="fit-item">
+                <i class="fas fa-search-plus"></i>
+                <h3>Prospection & Partenariats</h3>
+                <p>Mon expérience en gestion de ressources documentaires et en médiation m'a permis de développer des compétences clés en matière de prospection et de développement de réseaux professionnels, essentielles pour promouvoir l'offre de services de la Mission Locale auprès des entreprises.</p>
+            </div>
+            
+            <div class="fit-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Intermédiation</h3>
+                <p>Ma formation en médiation numérique et mon expertise en création de contenus me permettent de faciliter efficacement la mise en relation entre les jeunes et les employeurs, en utilisant des outils adaptés et en organisant des événements ciblés.</p>
+            </div>
+            
+            <div class="fit-item">
+                <i class="fas fa-cogs"></i>
+                <h3>Structuration de l'offre de service</h3>
+                <p>Mon expérience en ingénierie pédagogique et en développement d'applications m'a dotée d'une capacité à concevoir et mettre en place des outils et des événements qui optimisent les parcours d'insertion et répondent aux besoins spécifiques des jeunes et des entreprises.</p>
+            </div>
+            
+            <div class="fit-item">
+                <i class="fas fa-users"></i>
+                <h3>Animation d'ateliers collectifs</h3>
+                <p>Ma pratique en conception pédagogique et en animation de formations me permet de créer et d'animer des ateliers dynamiques sur les techniques de recherche d'emploi, l'intégration dans le monde du travail et la connaissance du marché.</p>
+            </div>
+            
+            <div class="fit-item">
+                <i class="fas fa-database"></i>
+                <h3>Capitalisation et traitement de l'information</h3>
+                <p>Mes compétences en gestion documentaire, en création de bases de données et en analyse permettent une capitalisation efficace des ressources et une actualisation constante des informations juridiques et réglementaires nécessaires au poste.</p>
+            </div>
+            
+            <div class="fit-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Analyse des besoins et amélioration continue</h3>
+                <p>Ma formation en analyse de données (2023) et mon expérience en enquêtes et reporting me donnent les outils pour recueillir et analyser efficacement les besoins, proposer des mesures correctives et contribuer à l'amélioration continue de l'offre de services.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+    <div class="container">
+        <div class="section-title-container">
+            <p class="section-subtitle">Contact</p>
+            <h2 class="section-title">Me Contacter</h2>
+        </div>
+        <div class="contact-content" style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>07.69.03.18.97</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>fontaine.alexia8@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>120 rue de Voves, 28630 Le Coudray</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <a href="https://www.linkedin.com/in/alexiafontaine" target="_blank" class="header-cta" style="margin-right: 15px;">
+                    <i class="fab fa-linkedin" style="margin-right: 10px;"></i>LinkedIn
+                </a>
+                <a href="https://portfolio-af-v2.netlify.app/" target="_blank" class="header-cta">
+                    <i class="fas fa-briefcase" style="margin-right: 10px;"></i>Portfolio
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container footer-content">
+        <p style="margin-bottom: 20px; color: white;">© 2025 Alexia Fontaine - Candidature Chargée de projet Mission Locale</p>
+        <p style="color: rgba(255,255,255,0.7);">Conception et développement personnalisé avec ❤️</p>
+    </div>
+</footer>

@@ -1,0 +1,21 @@
+id,nom,type,date,lieu,description,entreprises_participants,nombre_participants,statut,notes_bilan
+1,Événement 1,Forum,2025-08-15,En ligne,Description de l'événement 1,"23,7,2,17,12,29,26",7,Annulé,
+2,Événement 2,Petit-déjeuner,2025-05-23,Locaux partenaire,Description de l'événement 2,"17,27,29,6",4,En préparation,
+3,Événement 3,Autre,2025-07-06,En ligne,Description de l'événement 3,"24,19,9",3,En préparation,
+4,Événement 4,Petit-déjeuner,2025-04-08,Locaux partenaire,Description de l'événement 4,"18,26,21,17,14,16,4,1,22",9,En préparation,Bilan de l'événement 4
+5,Événement 5,Autre,2025-05-24,Locaux partenaire,Description de l'événement 5,"25,23,16,22,26,2,27,13,11",9,Annulé,
+6,Événement 6,Conférence,2025-03-31,Lieu externe,Description de l'événement 6,"19,26,8,23",4,Terminé,Bilan de l'événement 6
+7,Événement 7,Workshop,2025-07-14,Locaux partenaire,Description de l'événement 7,"16,18,29,15,21,19,2,10",8,Annulé,
+8,Événement 8,Conférence,2025-07-03,Nos locaux,Description de l'événement 8,"23,24,7,17,1,25,18,13",8,Planifié,
+9,Événement 9,Workshop,2025-07-23,En ligne,Description de l'événement 9,"13,16,26,25,15,17,6,8",8,Terminé,
+10,Événement 10,Workshop,2025-08-30,Locaux partenaire,Description de l'événement 10,"18,2,6,25",4,Terminé,
+11,Événement 11,Forum,2025-10-13,Nos locaux,Description de l'événement 11,"6,29,4",3,En préparation,
+12,Événement 12,Forum,2025-09-04,Lieu externe,Description de l'événement 12,"19,16",2,En préparation,
+13,Événement 13,Petit-déjeuner,2025-09-26,Nos locaux,Description de l'événement 13,10,1,Planifié,
+14,Événement 14,Conférence,2025-05-31,Lieu externe,Description de l'événement 14,"28,24,2,14",4,En préparation,
+15,Événement 15,Workshop,2025-03-28,Lieu externe,Description de l'événement 15,"16,17,5,28,2,24,14,10,22",9,En préparation,Bilan de l'événement 15
+16,Événement 16,Conférence,2025-05-24,Nos locaux,Description de l'événement 16,"20,12,10,11,18,1,2",7,Planifié,
+17,Événement 17,Workshop,2025-05-27,Lieu externe,Description de l'événement 17,"28,1,17,15",4,Terminé,
+18,Événement 18,Visite,2025-06-26,Nos locaux,Description de l'événement 18,"29,21,13,4,2,8,3",7,Terminé,
+19,Événement 19,Workshop,2025-07-27,Nos locaux,Description de l'événement 19,"28,13,16,26,20,4,18,27,6",9,Planifié,
+20,Événement 20,Visite,2025-08-12,En ligne,Description de l'événement 20,"28,18",2,Annulé,

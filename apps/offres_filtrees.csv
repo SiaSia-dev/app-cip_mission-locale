@@ -1,0 +1,2 @@
+id,company_id,company_name,title,sector,contract_type,required_qualification,required_skills,required_experience,location,publication_date,status,applications
+O007_1,E007,Santé Plus,Développeur,Informatique,CDI,CAP/BEP,"['Rigueur', 'Informatique']",3,Barjouville,2025-04-02,Active,7
